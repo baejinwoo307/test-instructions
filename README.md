@@ -28,6 +28,7 @@
 
 ## 2. System context diagram
 
+<img width="818" height="618" alt="system_context_diagram" src="https://github.com/user-attachments/assets/53367d8c-9092-499e-a87a-466789316d78" />
 
 
 ## 3. Use case list
