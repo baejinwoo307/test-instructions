@@ -1,14 +1,15 @@
-# 1. Conceptualization: Major Share (전공 자산 선순환 네트워크)
+# 1. Major Share (전공 자산 선순환 네트워크)
 
-**학번:** 202XXXXX  
-**이름:** 배진우  
-**이메일:** [진우님의 이메일 주소]
+| Student No | 22211987 |
+| :--- | :--- |
+| Name | 배진우|
+| E-mail | ajdjjaja292983474@gmail.com |
+
 
 ## [ Revision history ]
 | Revision date | Version # | Description | Author |
 | :--- | :--- | :--- | :--- |
-| 2026/03/22 | 1.00 | 최초 초안 작성 및 대여/예약 로직 상세화 Std No_Name.hwp] | 배진우 |
-| 2026/03/26 | 1.10 | 용어 일관성 수정 및 Mermaid 다이어그램 코드 삽입 | 배진우 |
+| 2026/03/27 | 1.00 | First draft | 배진우 |
 
 ## = Contents =
 1. [Business purpose](#1-business-purpose)
@@ -22,15 +23,27 @@
 ---
 
 ## 1. Business purpose
-- **Project background & Motivation:** 대학 전공 서적 및 실험 기자재는 단가가 높음에도 특정 학기에만 사용되는 '고비용 저효율' 특성을 가집니다 Std No_Name.hwp]. 현재의 중고 거래는 일회성 매매에 치중되어 단기 사용이 필요한 학생들에게 경제적 부담을 주며, 개인 간 대여는 반납 관리와 예약자 간 분쟁으로 활성화되지 못하고 있습니다 Example 4.pdf].
-- **Goal:** 'Major Share'는 전공 자산의 **매매(Sale)**와 **대여(Rental)**를 통합 관리하는 플랫폼입니다. 특히 실시간 예약 및 자동 연장 제어 시스템을 통해 자원 독점을 방지하고 활용도를 극대화하여 공정한 선순환 경제를 형성하는 것이 목표입니다 Project plan.pdf].
-- **Target market:** 영남대학교 컴퓨터공학부 재학생 및 전공 기자재 공유가 필요한 공과대학 구성원.
+- **Project background & Motivation:** 매 학기 시작마다 대학 생활 중 요구되는 전공및 교양 서적과 실험 기자재(ex 아두이노, 라즈베리 파이) 구입비는 적게는 수만 원에서 많게는 수십만 원에 달하는 가격입니다. 이 가격은 대학생들에게는 꽤나 큼 부담을 주는 금액들입니다. 게다가 이러한 자산들은 특정 학기의 수업 기간에만 집중적으로 사용된 후 나머지 기간에는 유휴 자산으로 방치되는 경우가 많고 추후에 사용하더라도 자원 활용의 효율성이 낮습니다.이러한 부담을 줄이는 방법인 에브리타임이나 당근마켓과 같은 기존 중고 거래 플랫폼은 존재하지만 이러한 플랫폼들은 일회성 매매에만 편중되어 있습니다.특히나 전공서적의 경우 지금 당장은 사용하지않더라도 추후에 사용할 가능성이 꽤나 크기에 매매를 하는것은 다소 꺼려질 수 있습니다.또한 단기간만 물건이 필요한 학생들에게는 매번 사고파는 과정이 번거로울 뿐만 아니라 대여를 원하더라도 신뢰할 수 있는 중개 시스템과 반납 확인 로직이 없어 개인 간 대여가 활성화되지 못하고 있습니다.이러한 환경은 학생들의 경제적 부담을 가중시킬 뿐만 아니라, 캠퍼스 내 자원의 효율적 배분을 저해하는 요소가 됩니다.따라서 자산의 소유권을 완전히 이전하는 매매와 일시적인 사용권을 공유하는 대여를 모두 가능하게 해줄 새로운 대안이 필요합니다.
+- **Goal:** Major Share는 전공 자산의 매매와 대여를 통합 관리하는 플랫폼입니다. 특히 실시간 예약 및 자동 연장 제어 시스템을 통해 자원 독점을 방지하고 활용도를 극대화하여 공정한 선순환 경제를 형성하는 것이 목표입니다.
+- **Target market:** 전국의 대학생들.
 
 ## 2. System context diagram
 
-<img width="776" height="602" alt="system_context_diagram" src="https://github.com/user-attachments/assets/a269c53d-5044-4cbb-aa6f-c30ab13d4934" />
+<img width="806" height="604" alt="system_context_diagram_" src="https://github.com/user-attachments/assets/48d47081-b9c8-4e30-8453-873324090618" />
 
 
+* **Login :** 로그인
+* **Register Item :** 판매/대여 물품 상세 정보 등록
+* **Search & Filter :** 카테고리 및 거래 방식별 물품 검색 요청
+* **Request Transaction :** 매매 구매 또는 대여/예약 신청 전송
+* **Request Extension :** 대여 중인 물품의 반납 기한 연장 신청
+* **Reserve Item :** 대여 중인 물품에 대한 차기 대기 예약 신청
+* **Manage Requests :** 공급자의 거래/연장/예약 요청 승인 및 거절
+* **Auto-Succession Alert :** 반납 완료 시 예약자에게 권한 자동 승계 알림
+* **Block Extension Feedback :** 예약자 존재 시 대여자의 연장 신청 차단 피드백
+* **Confirm Pickup/Return :** 물품 수령 및 반납 상호 인증
+* **Transaction Review :** 거래 종료 후 물품 상태 및 유저 매너 평가 기록
+* **System Monitoring :** 시스템 로그 및 이상 거래 데이터 모니터링
 
 ## 3. Use case list
 
