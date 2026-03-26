@@ -47,62 +47,67 @@
 
 ## 3. Use case list
 
-### 1) Register Item Std No_Name.hwp]
+### 1) Login
+| **Actor** | Seller/Lender,Buyer/Borrower/Admin |
+| :--- | :--- |
+| **Description** | 각자 자신의 계정으로 로그인하고 올바른 정보를 입력했다면 로그인에 성공하게 된다. |
+
+### 2) Register Item
 | **Actor** | Seller/Lender |
 | :--- | :--- |
 | **Description** | 판매 또는 대여하고자 하는 전공 자산의 상세 정보(상태, 가격, 대여 기간 등)를 시스템에 등록한다. |
 
-### 2) Request Extension
+### 3) Request Extension
 | **Actor** | Buyer/Borrower |
 | :--- | :--- |
 | **Description** | 대여 중인 물품의 기간 연장을 신청한다. 단, 예약 대기자가 없을 때만 시스템에 의해 활성화된다. |
 
-### 3) Reserve Item
+### 4) Reserve Item
 | **Actor** | Buyer/Borrower |
 | :--- | :--- |
 | **Description** | 현재 타 사용자가 이용 중인 물품에 대해 차기 대여 예약을 신청한다. |
 
-### 4) Accept Reservation
+### 5) Accept Reservation
 | **Actor** | Seller/Lender |
 | :--- | :--- |
 | **Description** | 들어온 예약 신청 목록을 확인하고 특정 사용자의 예약 요청을 승인하여 우선권을 부여한다. |
 
-### 5) Auto-Succession Project plan.pdf]
+### 6) Auto-Succession
 | **Actor** | System |
 | :--- | :--- |
 | **Description** | 기존 대여자의 반납이 완료되면 승인된 차기 예약자에게 자동으로 대여 권한 및 알림을 승계한다. |
 
-### 6) Block Extension
+### 7) Block Extension
 | **Actor** | System |
 | :--- | :--- |
 | **Description** | 승인된 예약자가 존재할 경우 기존 대여자의 연장 신청 기능을 자동으로 차단한다. |
 
-### 7) Search & Filter Example 2.pdf]
+### 8) Search & Filter
 | **Actor** | Buyer/Borrower |
 | :--- | :--- |
 | **Description** | 물품 카테고리, 거래 방식(매매/대여), 예약 가능 여부 등 필터를 적용하여 검색한다. |
 
-### 8) Request Transaction
+### 9) Request Transaction
 | **Actor** | Buyer/Borrower |
 | :--- | :--- |
 | **Description** | 특정 물품에 대해 구매 요청 또는 대여/예약 요청을 공급자에게 전송한다. |
 
-### 9) Manage Requests Std No_Name.hwp]
+### 10) Manage Requests Std
 | **Actor** | Seller/Lender |
 | :--- | :--- |
 | **Description** | 본인의 물품에 들어온 거래 및 연장/예약 요청을 대시보드에서 통합 관리한다. |
 
-### 10) Confirm Pickup/Return
+### 11) Confirm Pickup/Return
 | **Actor** | Seller/Lender, Buyer/Borrower |
 | :--- | :--- |
 | **Description** | 대면 거래 후 물품 수령 및 반납 완료를 상호 확인하여 시스템 상태를 업데이트한다. |
 
-### 11) Transaction Review Example 3.pdf]
+### 12) Transaction Review
 | **Actor** | Seller/Lender, Buyer/Borrower |
 | :--- | :--- |
 | **Description** | 거래 종료 후 상대방의 매너 및 물품 보존 상태에 대한 별점과 후기를 기록한다. |
 
-### 12) System Monitoring
+### 13) System Monitoring
 | **Actor** | Admin |
 | :--- | :--- |
 | **Description** | 전체 거래 데이터를 감시하여 부정 거래나 부적절한 게시물을 관리한다. |
